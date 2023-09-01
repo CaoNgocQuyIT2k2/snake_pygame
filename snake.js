@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const gameContainer = document.getElementById('gameContainer');
     
     let gameFrame = document.createElement('iframe');
-    gameFrame.src = 'https://your-vercel-app-url'; // Thay thế bằng URL của ứng dụng Vercel
+    gameFrame.src = 'https://snake-pygame.vercel.app/'; // Thay thế bằng URL của ứng dụng Vercel
     gameFrame.style.display = 'none';
     gameContainer.appendChild(gameFrame);
 

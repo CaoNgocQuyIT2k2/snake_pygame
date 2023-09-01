@@ -6,7 +6,7 @@ pg.init()
 Screen = pg.display.set_mode((400, 400))
 
 # Đặt tiêu đề
-pg.display.set_caption('Snake Game')
+pg.display.set_caption('Game bác sĩ săn covid')
 
 # Khởi tạo biến mặc định
 snake_part = 20  # thân rắn theo từng khúc

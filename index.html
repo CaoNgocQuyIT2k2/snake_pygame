@@ -7,7 +7,14 @@
 </head>
 <body>
     <button id="startButton">Start Game</button>
-    <div id="gameContainer"></div>
-    <script src="snake.js"></script>
+    <iframe id="gameFrame" width="400" height="400" frameborder="0"></iframe>
+    <script>
+        const startButton = document.getElementById('startButton');
+        const gameFrame = document.getElementById('gameFrame');
+        
+        startButton.addEventListener('click', () => {
+            gameFrame.src = 'https://snake-pygame.vercel.app/';
+        });
+    </script>
 </body>
 </html>
