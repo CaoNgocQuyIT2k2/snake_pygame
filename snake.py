@@ -77,6 +77,11 @@ while True:
 
     # Clear màn hình
     Screen.fill((0, 0, 0))
+    # Sử dụng hình nền
+    bg_img = pg.image.load('bg.png')
+    bg_img = pg.transform.scale(bg_img, (400, 400))
+    Screen.blit(bg_img, (0, 0))
+
     score_view()
     if gamePlay:
         # Cập nhật vị trí rắn
@@ -96,8 +101,8 @@ while True:
             score += 1
             if score > highScore: highScore = score
             # Random lại thức ăn
-            food_x = random.randint(0, 19) * snake_part
-            food_y = random.randint(0, 19) * snake_part
+            food_x = random.randint(1, 19) * snake_part
+            food_y = random.randint(1, 19) * snake_part
 
         # Vẽ thân rắn
         for bx, by in body_snake:
