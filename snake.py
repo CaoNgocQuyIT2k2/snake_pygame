@@ -15,6 +15,8 @@ x_change = y_change = 0  # vị trí thay đổi
 body_snake = []  # để lưu thân rắn
 length = 1  # thân rắn mặc định là 1
 score = highScore = 0
+is_eating_sound_playing = False
+
 
 snake_img = pg.image.load('head.jpg')
 snake_img = pg.transform.scale(snake_img, (snake_part, snake_part))
@@ -23,6 +25,7 @@ body_img = pg.transform.scale(body_img, (snake_part, snake_part))
 food_img = pg.image.load('covid.png')
 food_img = pg.transform.scale(food_img, (snake_part, snake_part))
 
+eat_sound = pg.mixer.Sound('EatSound_CC0_by_EugeneLoza.ogg')
 
 # Tạo điểm ăn cho rắn
 food_x = random.randint(0, 19) * snake_part
@@ -104,6 +107,7 @@ while True:
             food_x = random.randint(1, 19) * snake_part
             food_y = random.randint(1, 19) * snake_part
 
+            eat_sound.play()
         # Vẽ thân rắn
         for bx, by in body_snake:
             Screen.blit(body_img, (bx, by))
